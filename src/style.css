@@ -1,0 +1,76 @@
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.calculator {
+    width: 30vw;
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 3.5px solid brown;
+    border-radius: 5px;
+    background-color: brown;
+}
+
+.main-display {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid brown;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgb(223, 222, 222);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.formula-display {
+    padding: 10px;
+}
+
+.result-display {
+    max-width: 90%;
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    
+}
+
+button {
+    flex: 1;
+    flex-basis: 25%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 1px solid brown;
+    border-radius: 5px;
+}
+
+button.operator {
+    color: rgb(149, 0, 255);
+    background-color: rgb(249, 244, 192);
+}
+
+button.equal {
+    color: red;
+    background-color: rgb(199, 251, 255);
+}
+
+button.clear {
+    background-color: rgb(211, 255, 211);
+    color: green;
+}
