@@ -79,9 +79,14 @@ function main() {
     //Get equal button and add event handler into it
     const equalBtn = document.querySelector("button.equal");
     equalBtn.addEventListener("click", (e) => {
-        // CASE: a+ | a | +
-        // CASE: (empty)
-        if (!operator || currentNumber == 0) {
+        // CASE: (empty) or click equal multiple times
+        if (!operator) {
+            return;
+        }
+
+        // CASE: a+ | +
+        const lastValue = formulaValue[formulaValue.length - 1];
+        if (isOperator(`${lastValue}`)) {
             return;
         }
 
